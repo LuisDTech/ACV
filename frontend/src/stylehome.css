@@ -1,0 +1,269 @@
+/* Variables de color */
+:root {
+  --cream: #f5f3f0;
+  --dark-gray: #2d2d2d;
+  --medical-blue: #0066cc;
+  --medical-green: #00a86b;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+}
+
+/* Estilos base */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--cream);
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Encabezado */
+.header {
+  background-color: var(--cream);
+  padding: 1rem 1.5rem;
+}
+
+.nav-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-image {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  border-radius: 9999px;
+}
+
+.logo-text {
+  color: var(--dark-gray);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: var(--dark-gray);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--medical-blue);
+}
+
+.login-button {
+  background-color: var(--medical-blue);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-button:hover {
+  background-color: #0052a3;
+}
+
+.login-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Contenido principal */
+.main-content {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.hero-container {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .hero-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-title {
+  color: var(--dark-gray);
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1.25;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-title {
+    font-size: 3.75rem;
+  }
+}
+
+.hero-description {
+  color: #4b5563;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.cta-button {
+  background-color: var(--medical-blue);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #0052a3;
+}
+
+.cta-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.2s;
+}
+
+.cta-button:hover .cta-icon {
+  transform: translateX(0.25rem);
+}
+
+.hero-image-container {
+  position: relative;
+}
+
+.image-gradient {
+  background: linear-gradient(to bottom right, var(--blue-100), var(--blue-200));
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.hero-image {
+  width: 100%;
+  height: 24rem;
+  object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  .hero-image {
+    height: 32rem;
+  }
+}
+
+/* Estadísticas */
+.stats-container {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.stats-header {
+  margin-bottom: 1.5rem;
+}
+
+.stats-title {
+  color: var(--dark-gray);
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.stats-subtitle {
+  color: #4b5563;
+  margin: 0;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.stat-item {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .stat-item {
+    text-align: left;
+  }
+}
+
+.stat-number {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--medical-blue);
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .stat-number {
+    font-size: 2.25rem;
+  }
+}
+
+.stat-description {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin: 0;
+}
